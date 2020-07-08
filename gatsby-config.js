@@ -1,6 +1,6 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -66,5 +66,15 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    "gatsby-disable-prefetch",
+    "gatsby-plugin-route-dictionary",
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        analyzerMode: "static",
+        reportFilename: "_bundle.html",
+        openAnalyzer: false,
+      },
+    },
   ],
-}
+};
